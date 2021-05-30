@@ -1,0 +1,116 @@
+{
+  "name": "react-redux-boilerplate",
+  "version": "0.0.1",
+  "description": "React/Redux Boilerplate",
+  "repository": "https://github.com/Alemkin/react-redux-boilerplate",
+  "main": "/app",
+  "author": "Alexander Lemkin",
+  "scripts": {
+    "profile": "webpack --profile --json=compilation-stats.json",
+    "lint": "eslint \"./app/**/*.js\"",
+    "lint-fix": "eslint \"./app/**/*.js\" --fix",
+    "lint-style": "stylelint \"app/**/*.scss\"",
+    "lint-style-fix": "stylelint \"app/**/*.scss\" --fix",
+    "test": "cross-env NODE_ENV=test jest --verbose --watchAll",
+    "test-ci": "cross-env NODE_ENV=test jest --verbose",
+    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "dev": "cross-env NODE_ENV=development webpack serve --mode development --disable-host-check --progress"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "env": [
+      "jest"
+    ]
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    }
+  },
+  "eslintIgnore": [
+    "*.test.js"
+  ],
+  "jest": {
+    "testRegex": "\\.test\\.js",
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "app"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|scss)$": "identity-obj-proxy"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!@babel).+\\.js"
+    ],
+    "setupFiles": [
+      "<rootDir>/test.config.js",
+      "jest-canvas-mock"
+    ]
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.5.1",
+    "phaser": "^3.55.2",
+    "prop-types": "15.7.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-redux": "7.2.4",
+    "redux": "4.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.14.3",
+    "@babel/polyfill": "7.12.1",
+    "@babel/preset-env": "7.14.4",
+    "@babel/preset-react": "7.13.13",
+    "@babel/runtime": "7.14.0",
+    "autoprefixer": "10.2.6",
+    "babel-eslint": "10.1.0",
+    "babel-jest": "27.0.2",
+    "babel-loader": "8.2.2",
+    "babel-plugin-transform-object-rest-spread": "7.0.0-beta.3",
+    "bootstrap": "4.3.1",
+    "circular-dependency-plugin": "5.2.2",
+    "copy-webpack-plugin": "9.0.0",
+    "cross-env": "7.0.3",
+    "css-loader": "5.2.6",
+    "css-minimizer-webpack-plugin": "^3.0.0",
+    "enzyme": "3.11.0",
+    "eslint": "7.27.0",
+    "eslint-config-standard": "16.0.3",
+    "eslint-config-standard-jsx": "10.0.0",
+    "eslint-plugin-import": "2.23.4",
+    "eslint-plugin-jsx-a11y": "6.4.1",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "5.1.0",
+    "eslint-plugin-standard": "5.0.0",
+    "file-loader": "6.2.0",
+    "html-webpack-plugin": "5.3.1",
+    "identity-obj-proxy": "3.0.0",
+    "jest": "27.0.3",
+    "jest-canvas-mock": "2.3.1",
+    "mini-css-extract-plugin": "1.6.0",
+    "node-sass": "6.0.0",
+    "path": "0.12.7",
+    "postcss-loader": "5.3.0",
+    "react-testing-library": "8.0.1",
+    "redux-logger": "3.0.6",
+    "sass-loader": "11.1.1",
+    "standard": "16.0.3",
+    "stylelint": "13.13.1",
+    "stylelint-config-standard": "22.0.0",
+    "terser-webpack-plugin": "^5.1.2",
+    "url-loader": "4.1.1",
+    "webpack": "5.38.1",
+    "webpack-cli": "4.7.0",
+    "webpack-dev-server": "3.11.2",
+    "webpack-encoding-plugin": "0.3.1",
+    "webpack-manifest-plugin": "3.1.1",
+    "webpack-node-externals": "3.0.0",
+    "workbox-webpack-plugin": "6.1.5"
+  }
+}

@@ -1,0 +1,11 @@
+@import "../../style/variables.scss";
+
+.boilerplate-main {
+  position: absolute;
+
+  .clicked-ui {
+    background-color: $white;
+    opacity: 0.5;
+    padding: 5px;
+  }
+}

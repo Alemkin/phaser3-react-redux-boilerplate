@@ -1,0 +1,12 @@
+node/
+node_modules/
+/test/results
+npm-debug.log
+.tmp/
+stats.json
+compilation-stats.json
+/dist
+/build
+.vs/
+obj/
+bin/
