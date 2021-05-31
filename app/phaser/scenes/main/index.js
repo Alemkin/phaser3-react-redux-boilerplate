@@ -1,14 +1,14 @@
 import Phaser from 'phaser'
-import { INITIALIZE_GAME_SCENE } from '../sceneNames'
+import { MAIN } from '../sceneNames'
 import handlers from './handlers'
 
-class InitializeGame extends Phaser.Scene {
+class MainScene extends Phaser.Scene {
   constructor () {
-    super(INITIALIZE_GAME_SCENE)
+    super(MAIN)
   }
 
   preload () {
-    handlers.preload(this)
+
   }
 
   create () {
@@ -20,4 +20,4 @@ class InitializeGame extends Phaser.Scene {
   }
 }
 
-export default InitializeGame
+export default MainScene

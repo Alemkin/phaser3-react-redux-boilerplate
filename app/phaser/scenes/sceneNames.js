@@ -1,1 +1,2 @@
-export const INITIALIZE_GAME_SCENE = 'InitializeGame'
+export const MAIN = 'MainScene'
+export const PRELOAD = 'PreloadScene'

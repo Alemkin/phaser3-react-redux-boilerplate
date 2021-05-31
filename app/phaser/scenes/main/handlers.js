@@ -1,16 +1,7 @@
 import store from '../../../store'
 import { increment } from '../../../reducers/counterSlice'
-import dockImg from '../../../../assets/dock.png'
-import playerImg from '../../../../assets/fmship.png'
-import victorianImg from '../../../../assets/victorian-preview.png'
 import controllers from './controllers'
-import Assets from './assets'
-
-function preload (game) {
-  game.load.image(Assets.BACKGROUND, dockImg)
-  game.load.image(Assets.BACKGROUND2, victorianImg)
-  game.load.image(Assets.PLAYER, playerImg)
-}
+import Assets from '../assets'
 
 function create (game) {
   game.cameras.main.setBounds(0, 0, 4096, 4096)
@@ -34,4 +25,4 @@ function update (game) {
   controllers.player(game)
 }
 
-export default { preload, create, update }
+export default { create, update }

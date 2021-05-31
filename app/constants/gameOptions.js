@@ -1,5 +1,6 @@
 import Phaser from 'phaser'
 import main from '../phaser/scenes/main'
+import preload from '../phaser/scenes/preload'
 
 export default {
   type: Phaser.AUTO,
@@ -15,5 +16,5 @@ export default {
       }
     }
   },
-  scene: main
+  scene: [preload, main]
 }
