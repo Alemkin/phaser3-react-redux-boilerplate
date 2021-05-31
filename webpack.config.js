@@ -49,7 +49,7 @@ module.exports = {
       template: 'index.html.ejs',
       inject: false,
       filename: 'index.html',
-      title: 'R/R Boilerplate'
+      title: 'Phaser 3 Boilerplate'
     }),
     new WebpackManifestPlugin({
       fileName: 'asset-manifest.json'

@@ -1,8 +1,8 @@
 {
-  "name": "react-redux-boilerplate",
+  "name": "phaser3-react-redux-boilerplate",
   "version": "0.0.1",
-  "description": "React/Redux Boilerplate",
-  "repository": "https://github.com/Alemkin/react-redux-boilerplate",
+  "description": "Phaser 3 and React Boilerplate",
+  "repository": "https://github.com/Alemkin/phaser3-react-redux-boilerplate",
   "main": "/app",
   "author": "Alexander Lemkin",
   "scripts": {
