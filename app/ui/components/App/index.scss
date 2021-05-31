@@ -4,8 +4,9 @@
   position: absolute;
 
   .clicked-ui {
-    background-color: $white;
-    opacity: 0.5;
+    background-color: $black;
+    opacity: 0.8;
     padding: 5px;
+    color: $white;
   }
 }

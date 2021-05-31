@@ -10,3 +10,4 @@ compilation-stats.json
 .vs/
 obj/
 bin/
+.DS_Store

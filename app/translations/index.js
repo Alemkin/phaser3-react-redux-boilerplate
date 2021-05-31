@@ -1,6 +1,6 @@
 export default {
   App: {
-    clickImage: 'You clicked the image ',
+    clickImage: 'You have clicked the ship ',
     times: 'times.'
   }
 }
