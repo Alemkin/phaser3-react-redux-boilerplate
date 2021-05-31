@@ -4,8 +4,8 @@ import main from '../phaser/scenes/main'
 export default {
   type: Phaser.AUTO,
   parent: 'phaser-game',
-  width: 800,
-  height: 600,
+  width: 1080,
+  height: 720,
   pixelArt: true,
   physics: {
     default: 'arcade',
