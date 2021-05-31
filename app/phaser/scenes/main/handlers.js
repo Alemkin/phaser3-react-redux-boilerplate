@@ -1,8 +1,16 @@
 import store from '../../../store'
 import { increment } from '../../../reducers/counterSlice'
+import dockImg from '../../../../assets/dock.png'
+import playerImg from '../../../../assets/fmship.png'
+import controllers from './controllers'
 import Assets from './assets'
 
-export default function (game) {
+function preload (game) {
+  game.load.image(Assets.BACKGROUND, dockImg)
+  game.load.image(Assets.PLAYER, playerImg)
+}
+
+function create (game) {
   game.cameras.main.setBounds(0, 0, 1088, 960)
   game.physics.world.setBounds(0, 0, 1088, 960)
 
@@ -19,3 +27,9 @@ export default function (game) {
 
   game.cameras.main.startFollow(game.player, true, 0.05, 0.05)
 }
+
+function update (game) {
+  controllers.player(game)
+}
+
+export default { preload, create, update }

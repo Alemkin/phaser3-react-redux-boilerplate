@@ -1,8 +1,6 @@
 import Phaser from 'phaser'
 import { INITIALIZE_GAME_SCENE } from '../sceneNames'
-import preloadHandler from './preload'
-import createHandler from './create'
-import updateHandler from './update'
+import handlers from './handlers'
 
 class InitializeGame extends Phaser.Scene {
   constructor () {
@@ -10,15 +8,15 @@ class InitializeGame extends Phaser.Scene {
   }
 
   preload () {
-    preloadHandler(this)
+    handlers.preload(this)
   }
 
   create () {
-    createHandler(this)
+    handlers.create(this)
   }
 
   update () {
-    updateHandler(this)
+    handlers.update(this)
   }
 }
 

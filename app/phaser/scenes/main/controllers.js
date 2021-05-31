@@ -1,4 +1,4 @@
-export default function (game) {
+function player (game) {
   game.player.setVelocity(0)
   if (game.cursors.left.isDown) {
     game.player.setVelocityX(-500)
@@ -19,3 +19,5 @@ export default function (game) {
     game.player.y += 2.5
   }
 }
+
+export default { player }
