@@ -1,7 +1,24 @@
+import Phaser from 'phaser'
 import store from '../../../store'
 import { increment } from '../../../reducers/counterSlice'
 import playerController from './playerController'
 import Assets from '../assets'
+
+function setupDebug (game, worldLayer) {
+  game.input.keyboard.once('keydown-P', event => {
+    game.physics.world.createDebugGraphic()
+
+    const graphics = game.add
+      .graphics()
+      .setAlpha(0.75)
+      .setDepth(20)
+    worldLayer.renderDebug(graphics, {
+      tileColor: null, // Color of non-colliding tiles
+      collidingTileColor: new Phaser.Display.Color(243, 134, 48, 255), // Color of colliding tiles
+      faceColor: new Phaser.Display.Color(40, 39, 37, 255) // Color of colliding face edges
+    })
+  })
+}
 
 function create (game) {
   // game.add.image(0, 0, Assets.BACKGROUND2).setOrigin(0)
@@ -26,6 +43,8 @@ function create (game) {
   game.cursors = game.input.keyboard.createCursorKeys()
 
   game.player = game.physics.add.sprite(spawnPoint.x, spawnPoint.y, Assets.GENTLEMAN_SPRITESHEET)
+  game.player.setSize(34, 32)
+  game.player.setOffset(16, 34)
   game.physics.add.collider(game.player, worldLayer)
   game.player.setCollideWorldBounds(true)
   game.player.setInteractive()
@@ -34,6 +53,8 @@ function create (game) {
   })
 
   game.cameras.main.startFollow(game.player, true, 0.05, 0.05)
+
+  setupDebug(game, worldLayer)
 }
 
 function update (game) {
