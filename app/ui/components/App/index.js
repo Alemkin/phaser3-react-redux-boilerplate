@@ -15,7 +15,7 @@ const App = () => {
   const clickedCount = useSelector((state) => state.counter.value)
   return (
     <div className='boilerplate-main' style={style}>
-      <div aria-label='Counter tracking the amount of clicks on the floating image.' className='clicked-ui'>{`${t.clickImage} ${clickedCount} ${t.times}`}</div>
+      <div aria-label={t.counterAria} className='clicked-ui'>{`${t.clickImage} ${clickedCount} ${t.times}`}</div>
     </div>
   )
 }

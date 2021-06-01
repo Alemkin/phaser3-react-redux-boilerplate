@@ -3,5 +3,6 @@ export default {
   BACKGROUND: 'bg-dock',
   BACKGROUND2: 'bg-town',
   TUXEMON_JSON: 'tuxemon-json',
-  TUXEMON: 'tuxemon'
+  TUXEMON: 'tuxemon',
+  GENTLEMAN_SPRITESHEET: 'gentleman'
 }

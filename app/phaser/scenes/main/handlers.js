@@ -1,10 +1,11 @@
 import store from '../../../store'
 import { increment } from '../../../reducers/counterSlice'
-import controllers from './controllers'
+import playerController from './playerController'
 import Assets from '../assets'
 
 function create (game) {
   // game.add.image(0, 0, Assets.BACKGROUND2).setOrigin(0)
+  playerController.setPlayerAnimations(game)
 
   const map = game.make.tilemap({ key: Assets.TUXEMON_JSON })
 
@@ -24,7 +25,7 @@ function create (game) {
 
   game.cursors = game.input.keyboard.createCursorKeys()
 
-  game.player = game.physics.add.image(spawnPoint.x, spawnPoint.y, Assets.PLAYER)
+  game.player = game.physics.add.sprite(spawnPoint.x, spawnPoint.y, Assets.GENTLEMAN_SPRITESHEET)
   game.physics.add.collider(game.player, worldLayer)
   game.player.setCollideWorldBounds(true)
   game.player.setInteractive()
@@ -36,7 +37,7 @@ function create (game) {
 }
 
 function update (game) {
-  controllers.player(game)
+  playerController.updateMovement(game)
 }
 
 export default { create, update }
