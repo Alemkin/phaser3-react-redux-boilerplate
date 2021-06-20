@@ -60,9 +60,31 @@
          "visible":false,
          "x":0,
          "y":0
+        }, 
+        {
+         "draworder":"topdown",
+         "id":5,
+         "name":"Waypoints",
+         "objects":[
+                {
+                 "height":4,
+                 "id":279,
+                 "name":"Pallet Town Portal",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":320,
+                 "x":192,
+                 "y":1276
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":false,
+         "x":0,
+         "y":0
         }],
- "nextlayerid":5,
- "nextobjectid":277,
+ "nextlayerid":6,
+ "nextobjectid":281,
  "orientation":"orthogonal",
  "properties":[
         {
